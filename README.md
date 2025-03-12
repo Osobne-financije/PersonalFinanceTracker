@@ -2,7 +2,6 @@
 
 ## Projektni tim
 
-Ime i prezime | E-mail adresa (FOI) |    JMBAG   | Github korisničko ime
     Jan Biro  |    jbiro23@foi.hr   | 0010241827 | Jbiro23
 
 
