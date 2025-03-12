@@ -1,4 +1,4 @@
-Softver za praćenje osobnih financija
+## Softver za praćenje osobnih financija
 
 ## Projektni tim
 
