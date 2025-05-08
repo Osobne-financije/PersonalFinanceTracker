@@ -31,6 +31,13 @@ namespace Osobne_Financije
                 return;
             }
 
+            StudentRepository repo = new StudentRepository();
+            if (repo.UsernameExists(username))
+            {
+                MessageBox.Show("Korisničko ime već postoji. Molimo odaberite drugo.");
+                return;
+            }
+
             Student novi = new Student
             {
                 Firstname = firstName,
