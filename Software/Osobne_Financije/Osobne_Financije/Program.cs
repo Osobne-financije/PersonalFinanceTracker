@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,6 +15,8 @@ namespace Osobne_Financije
         [STAThread]
         static void Main()
         {
+            DB.SetConfiguration("RWA2425_jbiro23_DB", "RWA2425_jbiro23_User", "Y8LA6+c6");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmLogin());
