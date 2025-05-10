@@ -7,14 +7,14 @@ namespace Osobne_Financije.Repositories
 {
     class StudentRepository
     {
+
         public bool Signup(Student student)
         {
             DB.OpenConnection();
 
             string hashed = HashHelper.HashPassword(student.Password);
 
-            string query = $"INSERT INTO Students (FirstName, LastName, UserName, Password) " +
-                           $"VALUES ('{student.Firstname}', '{student.Lastname}', '{student.Username}', '{hashed}')";
+            string query = $"INSERT INTO Students (FirstName, LastName, UserName, Password) " + $"VALUES ('{student.Firstname}', '{student.Lastname}', '{student.Username}', '{hashed}')";
 
             int result = DB.ExecuteCommand(query);
 
