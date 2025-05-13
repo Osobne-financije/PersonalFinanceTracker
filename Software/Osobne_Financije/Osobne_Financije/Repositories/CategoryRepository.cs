@@ -37,5 +37,16 @@ namespace Osobne_Financije.Repositories
             DB.CloseConnection();
             return affectedRows > 0;
         }
+
+        public bool CategoryExists(string category)
+        {
+            DB.OpenConnection();
+
+            string query = $"SELECT COUNT(*) FROM Students WHERE Name = '{category}'";
+            int count = (int)DB.GetScalar(query);
+
+            DB.CloseConnection();
+            return count > 0;
+        }
     }
 }
