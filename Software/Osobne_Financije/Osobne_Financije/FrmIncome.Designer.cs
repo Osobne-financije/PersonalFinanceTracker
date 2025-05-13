@@ -48,12 +48,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.tbAmount = new System.Windows.Forms.TextBox();
-            this.tbDescription = new System.Windows.Forms.TextBox();
-            this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.cmbCategories = new System.Windows.Forms.ComboBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.tbCategory = new System.Windows.Forms.TextBox();
+            this.txtCategory = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -293,28 +293,29 @@
             this.btnSave.TabIndex = 27;
             this.btnSave.Text = "SPREMI";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // tbAmount
+            // txtAmount
             // 
-            this.tbAmount.Location = new System.Drawing.Point(408, 499);
-            this.tbAmount.Name = "tbAmount";
-            this.tbAmount.Size = new System.Drawing.Size(152, 22);
-            this.tbAmount.TabIndex = 28;
+            this.txtAmount.Location = new System.Drawing.Point(408, 499);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(152, 22);
+            this.txtAmount.TabIndex = 28;
             // 
-            // tbDescription
+            // txtDescription
             // 
-            this.tbDescription.Location = new System.Drawing.Point(408, 583);
-            this.tbDescription.Name = "tbDescription";
-            this.tbDescription.Size = new System.Drawing.Size(152, 22);
-            this.tbDescription.TabIndex = 29;
+            this.txtDescription.Location = new System.Drawing.Point(408, 583);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(152, 22);
+            this.txtDescription.TabIndex = 29;
             // 
-            // cbCategory
+            // cmbCategories
             // 
-            this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(408, 543);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(152, 24);
-            this.cbCategory.TabIndex = 31;
+            this.cmbCategories.FormattingEnabled = true;
+            this.cmbCategories.Location = new System.Drawing.Point(408, 543);
+            this.cmbCategories.Name = "cmbCategories";
+            this.cmbCategories.Size = new System.Drawing.Size(152, 24);
+            this.cmbCategories.TabIndex = 31;
             // 
             // dateTimePicker
             // 
@@ -334,13 +335,14 @@
             this.btnAdd.TabIndex = 36;
             this.btnAdd.Text = "DODAJ";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // tbCategory
+            // txtCategory
             // 
-            this.tbCategory.Location = new System.Drawing.Point(728, 500);
-            this.tbCategory.Name = "tbCategory";
-            this.tbCategory.Size = new System.Drawing.Size(181, 22);
-            this.tbCategory.TabIndex = 37;
+            this.txtCategory.Location = new System.Drawing.Point(728, 500);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(181, 22);
+            this.txtCategory.TabIndex = 37;
             // 
             // label10
             // 
@@ -359,12 +361,12 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1348, 699);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.tbCategory);
+            this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dateTimePicker);
-            this.Controls.Add(this.cbCategory);
-            this.Controls.Add(this.tbDescription);
-            this.Controls.Add(this.tbAmount);
+            this.Controls.Add(this.cmbCategories);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
@@ -414,12 +416,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox tbAmount;
-        private System.Windows.Forms.TextBox tbDescription;
-        private System.Windows.Forms.ComboBox cbCategory;
+        private System.Windows.Forms.TextBox txtAmount;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.ComboBox cmbCategories;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox tbCategory;
+        private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.Label label10;
     }
 }
