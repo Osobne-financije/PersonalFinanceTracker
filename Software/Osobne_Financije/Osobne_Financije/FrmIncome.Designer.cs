@@ -51,7 +51,7 @@
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.cmbCategories = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtCategory = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -317,12 +317,12 @@
             this.cmbCategories.Size = new System.Drawing.Size(152, 24);
             this.cmbCategories.TabIndex = 31;
             // 
-            // dateTimePicker
+            // dtpDate
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(408, 627);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(243, 22);
-            this.dateTimePicker.TabIndex = 35;
+            this.dtpDate.Location = new System.Drawing.Point(408, 627);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(249, 22);
+            this.dtpDate.TabIndex = 35;
             // 
             // btnAdd
             // 
@@ -363,7 +363,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtCategory);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dateTimePicker);
+            this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.cmbCategories);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtAmount);
@@ -419,7 +419,7 @@
         private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.ComboBox cmbCategories;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtCategory;
         private System.Windows.Forms.Label label10;

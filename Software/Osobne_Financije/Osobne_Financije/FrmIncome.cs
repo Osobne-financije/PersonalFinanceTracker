@@ -25,6 +25,44 @@ namespace Osobne_Financije
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string amount = txtAmount.Text.Trim();
+            string description = txtDescription.Text.Trim();
+
+            if (string.IsNullOrEmpty(amount) || cmbCategories.SelectedIndex == -1 || string.IsNullOrEmpty(description))
+            {
+                MessageBox.Show("Unesite sve potrebne podatke");
+                return;
+            }
+            if (!decimal.TryParse(amount, out decimal parsedAmount))
+            {
+                MessageBox.Show("Unesite ispravan iznos.");
+                return;
+            }
+            int StudentId = Session.LoggedStudent.Id;
+
+            Income income = new Income
+            {
+                Amount = decimal.Parse(amount),
+                CategoryId = (int)cmbCategories.SelectedValue,
+                Description = description,
+                Date = dtpDate.Value,
+                StudentId = StudentId
+            };
+
+            IncomeRepository repo = new IncomeRepository();
+            bool isAdded = repo.AddIncome(income);
+
+            if (isAdded)
+            {
+                MessageBox.Show("Prihod dodan!");
+                txtAmount.Clear();
+                txtDescription.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Greška prilikom dodavanja prihoda.");
+            }
+
 
         }
 
