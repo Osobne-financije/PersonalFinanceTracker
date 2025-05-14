@@ -46,8 +46,7 @@ namespace Osobne_Financije
                 Password = password
             };
 
-            StudentRepository studentRepository = new StudentRepository();
-            bool isRegistered = studentRepository.Signup(novi);
+            bool isRegistered = repo.Signup(novi);
 
             if (isRegistered)
             {
@@ -59,6 +58,18 @@ namespace Osobne_Financije
             else
             {
                 MessageBox.Show("Registracija nije uspjela. Pokušajte ponovo.");
+            }
+        }
+
+        private void cbPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbPassword.Checked)
+            {
+                txtPass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPass.UseSystemPasswordChar = true;
             }
         }
     }

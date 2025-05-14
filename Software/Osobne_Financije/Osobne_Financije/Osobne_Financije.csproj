@@ -39,6 +39,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIncome.Designer.cs">
+      <DependentUpon>FrmIncome.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,10 +76,17 @@
       <DependentUpon>FrmSignup.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\HashHelper.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Expense.cs" />
+    <Compile Include="Models\Income.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CategoryRepository.cs" />
     <Compile Include="Repositories\StudentRepository.cs" />
+    <EmbeddedResource Include="FrmIncome.resx">
+      <DependentUpon>FrmIncome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +148,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Dlls\DBLayer.dll" />
+    <None Include="Resources\Untitled design %287%291.png" />
+    <None Include="Resources\Untitled design %284%293.png" />
+    <None Include="Resources\Untitled design %287%29.png" />
+    <None Include="Resources\Untitled design %286%291.png" />
+    <None Include="Resources\Untitled design %286%29.png" />
+    <None Include="Resources\Untitled design %284%292.png" />
+    <None Include="Resources\Untitled design %284%291.png" />
+    <None Include="Resources\Untitled design %284%29.png" />
+    <None Include="Resources\Untitled design %283%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

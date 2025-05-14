@@ -92,7 +92,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label2.ForeColor = System.Drawing.Color.Navy;
             this.label2.Location = new System.Drawing.Point(312, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(175, 38);
@@ -101,7 +101,7 @@
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.label4.BackColor = System.Drawing.Color.Navy;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
             this.label4.Location = new System.Drawing.Point(17, 41);
@@ -113,7 +113,7 @@
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.label5.BackColor = System.Drawing.Color.Navy;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Window;
             this.label5.Location = new System.Drawing.Point(24, 237);
@@ -127,7 +127,7 @@
             // 
             this.btnSignup.BackColor = System.Drawing.SystemColors.Window;
             this.btnSignup.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignup.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnSignup.ForeColor = System.Drawing.Color.Navy;
             this.btnSignup.Location = new System.Drawing.Point(55, 285);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(145, 36);
@@ -138,7 +138,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnLogin.BackColor = System.Drawing.Color.Navy;
             this.btnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.Window;
             this.btnLogin.Location = new System.Drawing.Point(329, 294);
@@ -151,7 +151,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pictureBox1.BackColor = System.Drawing.Color.Navy;
             this.pictureBox1.Location = new System.Drawing.Point(0, -1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(262, 361);
