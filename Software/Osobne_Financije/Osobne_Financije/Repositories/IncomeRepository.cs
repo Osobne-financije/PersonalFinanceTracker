@@ -15,12 +15,36 @@ namespace Osobne_Financije.Repositories
         {
             DB.OpenConnection();
 
-            string query = $"INSERT INTO Income (StudentId, CategoryId, Amount, Date, Description) VALUES ({income.StudentId}, {income.CategoryId}, {income.Amount.ToString(System.Globalization.CultureInfo.InvariantCulture)}, '{income.Date:yyyy-MM-dd}', '{income.Description}')";
+            string query = $"INSERT INTO Incomes (StudentId, CategoryId, Amount, Date, Description) VALUES ({income.StudentId}, {income.CategoryId}, {income.Amount.ToString(System.Globalization.CultureInfo.InvariantCulture)}, '{income.Date:yyyy-MM-dd}', '{income.Description}')";
             
             int affectedRows = DB.ExecuteCommand(query);
             DB.CloseConnection();
 
             return affectedRows > 0;
+        }
+
+        public List<Income> GetIncomesByStudentId(int studentId)
+        {
+            List<Income> incomes = new List<Income>();
+            DB.OpenConnection();
+            string query = $"SELECT * FROM Incomes WHERE StudentId = {studentId}";
+            SqlDataReader reader = DB.GetDataReader(query);
+
+            while (reader.Read())
+            {
+                Income income = new Income
+                {
+                    Id = (int)reader["IncomeId"],
+                    StudentId = (int)reader["StudentId"],
+                    CategoryId = (int)reader["CategoryId"],
+                    Amount = (decimal)reader["Amount"],
+                    Date = (DateTime)reader["Date"],
+                    Description = reader["Description"].ToString(),
+                };
+                incomes.Add(income);
+            }
+            DB.CloseConnection();
+            return incomes;
         }
 
     }
