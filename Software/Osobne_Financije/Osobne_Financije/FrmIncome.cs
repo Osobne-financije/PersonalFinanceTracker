@@ -1,6 +1,7 @@
 ﻿using Osobne_Financije.Models;
 using Osobne_Financije.Repositories;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Osobne_Financije
@@ -14,7 +15,12 @@ namespace Osobne_Financije
 
         private void FrmIncome_Load(object sender, EventArgs e)
         {
+            CategoryRepository repo = new CategoryRepository();
+            List<Category> Incomecategories = repo.GetCategoriesByType("Income");
 
+            cmbCategories.DataSource = Incomecategories;
+            cmbCategories.DisplayMember = "Name";
+            cmbCategories.ValueMember = "Id";
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -29,6 +35,7 @@ namespace Osobne_Financije
             if (category == "")
             {
                 MessageBox.Show("Unesite kategoriju");
+                return;
             }
 
             CategoryRepository repo = new CategoryRepository();
@@ -50,7 +57,12 @@ namespace Osobne_Financije
             {
                 MessageBox.Show("Kategorija dodana!");
                 txtCategory.Clear();
-                cmbCategories.Items.Add(category);
+                List<Category> updatedCategories = repo.GetCategoriesByType("Income");
+                cmbCategories.DataSource = null; 
+                cmbCategories.DataSource = updatedCategories;
+                cmbCategories.DisplayMember = "Name";
+                cmbCategories.ValueMember = "Id";
+
             }
             else
             {

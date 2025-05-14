@@ -12,14 +12,14 @@ namespace Osobne_Financije.Repositories
             List<Category> categories = new List<Category>();
 
             DB.OpenConnection();
-            string query = "SELECT * FROM Categories WHERE Type = '{type}'";
+            string query = $"SELECT * FROM Categories WHERE Type = '{type}'";
             SqlDataReader reader = DB.GetDataReader(query);
 
             while (reader.Read())
             {
                 Category category = new Category
                 {
-                    Id = (int)reader["id"],
+                    Id = (int)reader["CategoryId"],
                     Name = reader["Name"].ToString(),
                     Type = reader["Type"].ToString(),
                 };
@@ -42,7 +42,7 @@ namespace Osobne_Financije.Repositories
         {
             DB.OpenConnection();
 
-            string query = $"SELECT COUNT(*) FROM Students WHERE Name = '{category}'";
+            string query = $"SELECT COUNT(*) FROM Categories WHERE Name = '{category}'";
             int count = (int)DB.GetScalar(query);
 
             DB.CloseConnection();
