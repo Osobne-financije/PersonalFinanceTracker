@@ -83,7 +83,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
+    <Compile Include="Repositories\IncomeRepository.cs" />
     <Compile Include="Repositories\StudentRepository.cs" />
+    <Compile Include="Session.cs" />
     <EmbeddedResource Include="FrmIncome.resx">
       <DependentUpon>FrmIncome.cs</DependentUpon>
     </EmbeddedResource>

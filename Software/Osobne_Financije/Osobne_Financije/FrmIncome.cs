@@ -21,6 +21,8 @@ namespace Osobne_Financije
             cmbCategories.DataSource = Incomecategories;
             cmbCategories.DisplayMember = "Name";
             cmbCategories.ValueMember = "Id";
+
+            ShowIncomes();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -106,6 +108,22 @@ namespace Osobne_Financije
             {
                 MessageBox.Show("Greška prilikom dodavanja kategorije.");
             }
+        }
+
+        private void ShowIncomes()
+        {
+            IncomeRepository IncomeRepository = new IncomeRepository();
+            List<Income> incomes = IncomeRepository.GetIncomesByStudentId(Session.LoggedStudent.Id);
+            dgvIncomes.DataSource = null; 
+            dgvIncomes.DataSource = incomes;
+
+            dgvIncomes.Columns["Description"].DisplayIndex = 0;
+            dgvIncomes.Columns["Amount"].DisplayIndex = 1;
+            dgvIncomes.Columns["Date"].DisplayIndex = 2;
+            dgvIncomes.Columns["Id"].Visible = false;
+            dgvIncomes.Columns["StudentId"].Visible = false;
+            dgvIncomes.Columns["CategoryId"].Visible = false;
+
         }
     }
 }
