@@ -27,7 +27,7 @@ namespace Osobne_Financije.Repositories
         {
             List<Income> incomes = new List<Income>();
             DB.OpenConnection();
-            string query = $"SELECT * FROM Incomes WHERE StudentId = {studentId}";
+            string query = $@"SELECT i.IncomeId, i.StudentId, i.CategoryId, i.Amount, i.Date, i.Description, c.Name AS CategoryName FROM Incomes i INNER JOIN Categories c ON i.CategoryId = c.CategoryId WHERE i.StudentId = {studentId}";
             SqlDataReader reader = DB.GetDataReader(query);
 
             while (reader.Read())
@@ -40,6 +40,7 @@ namespace Osobne_Financije.Repositories
                     Amount = (decimal)reader["Amount"],
                     Date = (DateTime)reader["Date"],
                     Description = reader["Description"].ToString(),
+                    CategoryName = reader["CategoryName"].ToString()
                 };
                 incomes.Add(income);
             }

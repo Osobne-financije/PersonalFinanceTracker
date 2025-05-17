@@ -117,9 +117,11 @@ namespace Osobne_Financije
             dgvIncomes.DataSource = null; 
             dgvIncomes.DataSource = incomes;
 
-            dgvIncomes.Columns["Description"].DisplayIndex = 0;
+            dgvIncomes.Columns["CategoryName"].HeaderText = "Kategorija";
+            dgvIncomes.Columns["CategoryName"].DisplayIndex = 0;
             dgvIncomes.Columns["Amount"].DisplayIndex = 1;
-            dgvIncomes.Columns["Date"].DisplayIndex = 2;
+            dgvIncomes.Columns["Description"].DisplayIndex = 2;
+            dgvIncomes.Columns["Date"].DisplayIndex = 3;
             dgvIncomes.Columns["Id"].Visible = false;
             dgvIncomes.Columns["StudentId"].Visible = false;
             dgvIncomes.Columns["CategoryId"].Visible = false;
