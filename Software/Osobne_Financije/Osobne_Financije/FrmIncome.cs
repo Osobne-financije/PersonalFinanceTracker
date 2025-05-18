@@ -127,5 +127,33 @@ namespace Osobne_Financije
             dgvIncomes.Columns["CategoryId"].Visible = false;
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvIncomes.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Odaberite prihod koji želite izbrisati");
+                return;
+            }
+            var result = MessageBox.Show("Jeste li sigurni da želite izbrisati odabrani prihod?","Potvrda brisanja", MessageBoxButtons.YesNo, MessageBoxIcon.Warning );
+
+            if (result == DialogResult.Yes) 
+            {
+                int SelectedIncomeId = (int)dgvIncomes.SelectedRows[0].Cells["Id"].Value;
+
+                IncomeRepository repository = new IncomeRepository();
+                bool isDeleted = repository.DeleteIncome(SelectedIncomeId);
+
+                if(isDeleted)
+                {
+                    MessageBox.Show("Prihod je uspješno izbrisan.");
+                    ShowIncomes();
+                }
+                else
+                {
+                    MessageBox.Show("Greška prilikom brisanja prihoda");
+                }
+            }
+        }
     }
 }
