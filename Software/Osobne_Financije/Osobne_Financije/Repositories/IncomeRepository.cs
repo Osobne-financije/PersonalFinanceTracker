@@ -48,5 +48,14 @@ namespace Osobne_Financije.Repositories
             return incomes;
         }
 
+        public bool DeleteIncome(int incomeId)
+        {
+            DB.OpenConnection();
+            string query = $"DELETE FROM Incomes WHERE IncomeId = {incomeId}";
+            int result = DB.ExecuteCommand(query);
+            DB.CloseConnection();
+            return result > 0;
+        }
+
     }
 }
