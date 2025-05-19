@@ -35,11 +35,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblMain = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTotalIncome = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvIncomes = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
@@ -75,7 +75,7 @@
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.lblMain);
             this.panel4.Location = new System.Drawing.Point(1, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(264, 702);
@@ -114,6 +114,7 @@
             this.btnLogut.TabIndex = 7;
             this.btnLogut.Text = "ODJAVA";
             this.btnLogut.UseVisualStyleBackColor = false;
+            this.btnLogut.Click += new System.EventHandler(this.btnLogut_Click);
             // 
             // label7
             // 
@@ -157,16 +158,19 @@
             this.label12.TabIndex = 2;
             this.label12.Text = "TROŠKOVI";
             // 
-            // label2
+            // lblMain
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(85, 249);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "POČETNA";
+            this.lblMain.AutoSize = true;
+            this.lblMain.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lblMain.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblMain.Location = new System.Drawing.Point(75, 247);
+            this.lblMain.Name = "lblMain";
+            this.lblMain.Size = new System.Drawing.Size(98, 21);
+            this.lblMain.TabIndex = 1;
+            this.lblMain.Text = "POČETNA";
+            this.lblMain.Click += new System.EventHandler(this.lblMain_Click);
+            this.lblMain.MouseEnter += new System.EventHandler(this.lblMain_MouseEnter);
+            this.lblMain.MouseLeave += new System.EventHandler(this.lblMain_MouseLeave);
             // 
             // panel3
             // 
@@ -175,7 +179,7 @@
             this.panel3.BackColor = System.Drawing.SystemColors.Menu;
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.txtTotalIncome);
             this.panel3.Location = new System.Drawing.Point(265, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1085, 87);
@@ -187,11 +191,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label1.Location = new System.Drawing.Point(742, 31);
+            this.label1.Location = new System.Drawing.Point(769, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 26);
+            this.label1.Size = new System.Drawing.Size(160, 26);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Financijsko stanje";
+            this.label1.Text = "Ukupni prihodi";
             // 
             // label11
             // 
@@ -204,13 +208,17 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "PRIHODI";
             // 
-            // textBox2
+            // txtTotalIncome
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(957, 35);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 0;
+            this.txtTotalIncome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotalIncome.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTotalIncome.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalIncome.ForeColor = System.Drawing.Color.Navy;
+            this.txtTotalIncome.Location = new System.Drawing.Point(925, 29);
+            this.txtTotalIncome.Name = "txtTotalIncome";
+            this.txtTotalIncome.Size = new System.Drawing.Size(122, 28);
+            this.txtTotalIncome.TabIndex = 0;
+            this.txtTotalIncome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel1
             // 
@@ -358,6 +366,7 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Window;
@@ -419,11 +428,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblMain;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTotalIncome;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvIncomes;
         private System.Windows.Forms.Label label3;

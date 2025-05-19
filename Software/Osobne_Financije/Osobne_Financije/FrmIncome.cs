@@ -2,6 +2,7 @@
 using Osobne_Financije.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Osobne_Financije
@@ -23,6 +24,7 @@ namespace Osobne_Financije
             cmbCategories.ValueMember = "Id";
 
             ShowIncomes();
+            ShowTotalIncome();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -59,6 +61,7 @@ namespace Osobne_Financije
                 MessageBox.Show("Prihod dodan!");
                 txtAmount.Clear();
                 txtDescription.Clear();
+                ShowIncomes();
             }
             else
             {
@@ -154,6 +157,41 @@ namespace Osobne_Financije
                     MessageBox.Show("Greška prilikom brisanja prihoda");
                 }
             }
+        }
+
+        private void ShowTotalIncome()
+        {
+            IncomeRepository repository = new IncomeRepository();
+            decimal total = repository.GetTotalIncomeByStudentId(Session.LoggedStudent.Id);
+            txtTotalIncome.Text = total.ToString("0.00");
+        }
+
+        private void btnLogut_Click(object sender, EventArgs e)
+        {
+            Session.LoggedStudent = null;
+            this.Hide();
+            FrmLogin loginForm = new FrmLogin();
+            loginForm.ShowDialog();
+            this.Close();
+        }
+
+        private void lblMain_Click(object sender, EventArgs e)
+        {
+            FrmMain frmMain = new FrmMain();
+            frmMain.Show();
+            this.Hide();
+        }
+
+        private void lblMain_MouseEnter(object sender, EventArgs e)
+        {
+            lblMain.Location = new Point(lblMain.Location.X - 5, lblMain.Location.Y);
+            lblMain.Font = new Font(lblMain.Font.FontFamily, 13, FontStyle.Bold);
+        }
+
+        private void lblMain_MouseLeave(object sender, EventArgs e)
+        {
+            lblMain.Location = new Point(lblMain.Location.X + 5, lblMain.Location.Y);
+            lblMain.Font = new Font(lblMain.Font.FontFamily, 11, FontStyle.Bold);
         }
     }
 }
