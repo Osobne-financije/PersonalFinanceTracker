@@ -16,7 +16,15 @@ namespace Osobne_Financije
 
         private void FrmExpense_Load(object sender, EventArgs e)
         {
+            CategoryRepository repo = new CategoryRepository();
+            List<Category> Expensecategories = repo.GetCategoriesByType("Expense");
 
+            cmbCategories.DataSource = Expensecategories;
+            cmbCategories.DisplayMember = "Name";
+            cmbCategories.ValueMember = "Id";
+
+            ShowExpenses();
+            ShowTotalExpense();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -53,7 +61,7 @@ namespace Osobne_Financije
                 MessageBox.Show("Prihod dodan!");
                 txtAmount.Clear();
                 txtDescription.Clear();
-                //ShowIncomes();
+                ShowExpenses();
             }
             else
             {
@@ -101,6 +109,83 @@ namespace Osobne_Financije
             {
                 MessageBox.Show("Greška prilikom dodavanja kategorije.");
             }
+        }
+        private void ShowExpenses()
+        { 
+            ExpenseRepository expenseRepository = new ExpenseRepository();
+            List<Expense> expense = expenseRepository.GetExpenseByStudentId(Session.LoggedStudent.Id);
+            dgvExpenses.DataSource = null;
+            dgvExpenses.DataSource = expense;
+
+            dgvExpenses.Columns["Description"].DisplayIndex = 0;
+            dgvExpenses.Columns["Amount"].DisplayIndex = 1;
+            dgvExpenses.Columns["Date"].DisplayIndex = 2;
+            dgvExpenses.Columns["Id"].Visible = false;
+            dgvExpenses.Columns["StudentId"].Visible = false;
+            dgvExpenses.Columns["CategoryId"].Visible = false;
+
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvExpenses.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Odaberite trošak koji želite izbrisati");
+                return;
+            }
+            var result = MessageBox.Show("Jeste li sigurni da želite izbrisati odabrani trošak?", "Potvrda brisanja", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                int SelectedExpenseId = (int)dgvExpenses.SelectedRows[0].Cells["Id"].Value;
+
+                ExpenseRepository repository = new ExpenseRepository();
+                bool isDeleted = repository.DeleteExpense(SelectedExpenseId);
+
+                if (isDeleted)
+                {
+                    MessageBox.Show("Prihod je uspješno izbrisan.");
+                    ShowExpenses();
+                }
+                else
+                {
+                    MessageBox.Show("Greška prilikom brisanja prihoda");
+                }
+            }
+        }
+
+        private void ShowTotalExpense()
+        {
+            ExpenseRepository repository = new ExpenseRepository();
+            decimal total = repository.GetTotalExpenseByStudentId(Session.LoggedStudent.Id);
+            txtTotalExpense.Text = total.ToString("0.00");
+        }
+
+        private void btnLogut_Click(object sender, EventArgs e)
+        {
+            Session.LoggedStudent = null;
+            this.Hide();
+            FrmLogin loginForm = new FrmLogin();
+            loginForm.ShowDialog();
+            this.Close();
+        }
+
+        private void lblMain_Click(object sender, EventArgs e)
+        {
+            FrmMain frmMain = new FrmMain();
+            frmMain.Show();
+            this.Hide();
+        }
+
+        private void lblMain_MouseEnter(object sender, EventArgs e)
+        {
+            lblMain.Location = new Point(lblMain.Location.X - 5, lblMain.Location.Y);
+            lblMain.Font = new Font(lblMain.Font.FontFamily, 13, FontStyle.Bold);
+        }
+
+        private void lblMain_MouseLeave(object sender, EventArgs e)
+        {
+            lblMain.Location = new Point(lblMain.Location.X + 5, lblMain.Location.Y);
+            lblMain.Font = new Font(lblMain.Font.FontFamily, 11, FontStyle.Bold);
         }
     }
 }
