@@ -33,5 +33,21 @@ namespace Osobne_Financije
             lblIncomes.Location = new Point(lblIncomes.Location.X + 5, lblIncomes.Location.Y);
             lblIncomes.Font = new Font(lblIncomes.Font.FontFamily, 11, FontStyle.Bold);
         }
+        private void lblExpenses_Click(object sender, EventArgs e)
+        {
+            FrmExpense expenseForm = new FrmExpense();
+            expenseForm.Show();
+            this.Hide();
+        }
+        private void lblExpenses_MouseEnter(object sender, EventArgs e)
+        {
+            lblExpenses.Location = new Point(lblExpenses.Location.X - 5, lblExpenses.Location.Y);
+            lblExpenses.Font = new Font(lblExpenses.Font.FontFamily, 13, FontStyle.Bold);
+        }
+        private void lblExpenses_MouseLeave(object sender, EventArgs e)
+        {
+            lblExpenses.Location = new Point(lblExpenses.Location.X + 5, lblExpenses.Location.Y);
+            lblExpenses.Font = new Font(lblExpenses.Font.FontFamily, 11, FontStyle.Bold);
+        }
     }
 }
