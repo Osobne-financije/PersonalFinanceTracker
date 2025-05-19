@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using DBLayer;
+using Osobne_Financije.Models;
+
+namespace Osobne_Financije.Repositories
+{
+    class ExpenseRepository
+    {
+        public bool AddExpense(Expense expense)
+        {
+            DB.OpenConnection();
+            string query = $"INSERT INTO Expenses (StudentId, CategoryId, Amount, Date, Description) VALUES ({expense.StudentId}, {expense.CategoryId}, {expense.Amount.ToString(System.Globalization.CultureInfo.InvariantCulture)}, '{expense.Date:yyyy-MM-dd}', '{expense.Description}')";
+
+            int affectedRows = DB.ExecuteCommand(query);
+            DB.CloseConnection();
+
+            return affectedRows > 0;
+        }
+
+        public List<Expense> GetExpenseByStudentId(int studentId)
+        {
+            List<Expense> expenses = new List<Expense>();
+            DB.OpenConnection();
+            string query = $@"SELECT i.ExpenseId, i.StudentId, i.CategoryId, i.Amount, i.Date, i.Description, c.Name AS CategoryName FROM Expense i INNER JOIN Categories c ON i.CategoryId = c.CategoryId WHERE i.StudentId = {studentId}";
+            SqlDataReader reader = DB.GetDataReader(query);
+
+            while (reader.Read())
+            {
+                Expense expense = new Expense
+                {
+                    Id = (int)reader["ExpenseId"],
+                    StudentId = (int)reader["StudentId"],
+                    CategoryId = (int)reader["CategoryId"],
+                    Amount = (decimal)reader["Amount"],
+                    Date = (DateTime)reader["Date"],
+                    Description = reader["Description"].ToString(),
+                    CategoryName = reader["CategoryName"].ToString()
+                };
+                expenses.Add(expense);
+            }
+            DB.CloseConnection();
+            return expenses;
+        }
+
+    }
+}

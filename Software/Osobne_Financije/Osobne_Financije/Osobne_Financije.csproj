@@ -51,11 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmExpanse.cs">
+    <Compile Include="FrmExpense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmExpanse.Designer.cs">
-      <DependentUpon>FrmExpanse.cs</DependentUpon>
+    <Compile Include="FrmExpense.Designer.cs">
+      <DependentUpon>FrmExpense.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmIncome.cs">
       <SubType>Form</SubType>
@@ -89,9 +89,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
+    <Compile Include="Repositories\ExpenseRepository.cs" />
     <Compile Include="Repositories\IncomeRepository.cs" />
     <Compile Include="Repositories\StudentRepository.cs" />
     <Compile Include="Session.cs" />
+    <EmbeddedResource Include="FrmExpense.resx">
+      <DependentUpon>FrmExpense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmIncome.resx">
       <DependentUpon>FrmIncome.cs</DependentUpon>
     </EmbeddedResource>
