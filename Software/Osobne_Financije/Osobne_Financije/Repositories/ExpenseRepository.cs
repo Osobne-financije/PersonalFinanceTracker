@@ -23,7 +23,7 @@ namespace Osobne_Financije.Repositories
         {
             List<Expense> expenses = new List<Expense>();
             DB.OpenConnection();
-            string query = $@"SELECT i.ExpenseId, i.StudentId, i.CategoryId, i.Amount, i.Date, i.Description, c.Name AS CategoryName FROM Expense i INNER JOIN Categories c ON i.CategoryId = c.CategoryId WHERE i.StudentId = {studentId}";
+            string query = $@"SELECT i.ExpenseId, i.StudentId, i.CategoryId, i.Amount, i.Date, i.Description, c.Name AS CategoryName FROM Expenses i INNER JOIN Categories c ON i.CategoryId = c.CategoryId WHERE i.StudentId = {studentId}";
             SqlDataReader reader = DB.GetDataReader(query);
 
             while (reader.Read())
@@ -42,6 +42,27 @@ namespace Osobne_Financije.Repositories
             }
             DB.CloseConnection();
             return expenses;
+        }
+        public bool DeleteExpense(int expenseId)
+        {
+            DB.OpenConnection();
+            string query = $"DELETE FROM Expenses WHERE ExpenseId = {expenseId}";
+            int result = DB.ExecuteCommand(query);
+            DB.CloseConnection();
+            return result > 0;
+        }
+
+        public decimal GetTotalExpenseByStudentId(int studentId)
+        {
+            DB.OpenConnection();
+            string query = $"SELECT SUM(Amount) FROM Expenses WHERE StudentId = {studentId}";
+            object result = DB.GetScalar(query);
+            DB.CloseConnection();
+
+            if (result == DBNull.Value)
+                return 0;
+            else
+                return Convert.ToDecimal(result);
         }
 
     }
