@@ -57,5 +57,18 @@ namespace Osobne_Financije.Repositories
             return result > 0;
         }
 
+        public decimal GetTotalIncomeByStudentId(int studentId)
+        {
+            DB.OpenConnection();
+            string query = $"SELECT SUM(Amount) FROM Incomes WHERE StudentId = {studentId}";
+            object result = DB.GetScalar(query);
+            DB.CloseConnection();
+
+            if (result == DBNull.Value)
+                return 0;
+            else
+                return Convert.ToDecimal(result);
+        }
+
     }
 }
