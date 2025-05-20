@@ -34,7 +34,7 @@
             this.btnLogut = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblIncome = new System.Windows.Forms.Label();
             this.lblMain = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.panel4.Controls.Add(this.btnLogut);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label14);
-            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.lblIncome);
             this.panel4.Controls.Add(this.lblMain);
             this.panel4.Location = new System.Drawing.Point(1, 0);
             this.panel4.Name = "panel4";
@@ -114,6 +114,7 @@
             this.btnLogut.TabIndex = 7;
             this.btnLogut.Text = "ODJAVA";
             this.btnLogut.UseVisualStyleBackColor = false;
+            this.btnLogut.Click += new System.EventHandler(this.btnLogut_Click);
             // 
             // label7
             // 
@@ -143,19 +144,22 @@
             this.label14.TabIndex = 4;
             this.label14.Text = "IZVJEŠTAJI";
             // 
-            // label12
+            // lblIncome
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblIncome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.SystemColors.Window;
-            this.label12.Location = new System.Drawing.Point(88, 330);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(85, 21);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "PRIHODI";
+            this.lblIncome.AutoSize = true;
+            this.lblIncome.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lblIncome.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblIncome.Location = new System.Drawing.Point(88, 330);
+            this.lblIncome.Name = "lblIncome";
+            this.lblIncome.Size = new System.Drawing.Size(85, 21);
+            this.lblIncome.TabIndex = 2;
+            this.lblIncome.Text = "PRIHODI";
+            this.lblIncome.Click += new System.EventHandler(this.lblIncome_Click);
+            this.lblIncome.MouseEnter += new System.EventHandler(this.lblIncome_MouseEnter);
+            this.lblIncome.MouseLeave += new System.EventHandler(this.lblIncome_MouseLeave);
             // 
             // lblMain
             // 
@@ -167,6 +171,9 @@
             this.lblMain.Size = new System.Drawing.Size(98, 21);
             this.lblMain.TabIndex = 1;
             this.lblMain.Text = "POČETNA";
+            this.lblMain.Click += new System.EventHandler(this.lblMain_Click);
+            this.lblMain.MouseEnter += new System.EventHandler(this.lblMain_MouseEnter);
+            this.lblMain.MouseLeave += new System.EventHandler(this.lblMain_MouseLeave);
             // 
             // panel3
             // 
@@ -371,6 +378,7 @@
             this.btnDelete.TabIndex = 39;
             this.btnDelete.Text = "IZBRIŠI";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // FrmExpense
             // 
@@ -421,7 +429,7 @@
         private System.Windows.Forms.Button btnLogut;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblIncome;
         private System.Windows.Forms.Label lblMain;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;

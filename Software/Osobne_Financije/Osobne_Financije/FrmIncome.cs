@@ -62,6 +62,7 @@ namespace Osobne_Financije
                 txtAmount.Clear();
                 txtDescription.Clear();
                 ShowIncomes();
+                ShowTotalIncome();
             }
             else
             {
@@ -192,6 +193,23 @@ namespace Osobne_Financije
         {
             lblMain.Location = new Point(lblMain.Location.X + 5, lblMain.Location.Y);
             lblMain.Font = new Font(lblMain.Font.FontFamily, 11, FontStyle.Bold);
+        }
+
+        private void lblExpense_Click(object sender, EventArgs e)
+        {
+            FrmExpense expenseForm = new FrmExpense();
+            expenseForm.Show();
+            this.Hide();
+        }
+        private void lblExpense_MouseEnter(object sender, EventArgs e)
+        {
+            lblExpense.Location = new Point(lblExpense.Location.X - 5, lblExpense.Location.Y);
+            lblExpense.Font = new Font(lblExpense.Font.FontFamily, 13, FontStyle.Bold);
+        }
+        private void lblExpense_MouseLeave(object sender, EventArgs e)
+        {
+            lblExpense.Location = new Point(lblExpense.Location.X + 5, lblExpense.Location.Y);
+            lblExpense.Font = new Font(lblExpense.Font.FontFamily, 11, FontStyle.Bold);
         }
     }
 }

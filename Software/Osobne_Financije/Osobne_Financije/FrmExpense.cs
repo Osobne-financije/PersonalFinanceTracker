@@ -62,6 +62,7 @@ namespace Osobne_Financije
                 txtAmount.Clear();
                 txtDescription.Clear();
                 ShowExpenses();
+                ShowTotalExpense();
             }
             else
             {
@@ -143,12 +144,12 @@ namespace Osobne_Financije
 
                 if (isDeleted)
                 {
-                    MessageBox.Show("Prihod je uspješno izbrisan.");
+                    MessageBox.Show("Trošak je uspješno izbrisan.");
                     ShowExpenses();
                 }
                 else
                 {
-                    MessageBox.Show("Greška prilikom brisanja prihoda");
+                    MessageBox.Show("Greška prilikom brisanja troška");
                 }
             }
         }
@@ -186,6 +187,23 @@ namespace Osobne_Financije
         {
             lblMain.Location = new Point(lblMain.Location.X + 5, lblMain.Location.Y);
             lblMain.Font = new Font(lblMain.Font.FontFamily, 11, FontStyle.Bold);
+        }
+
+        private void lblIncome_Click(object sender, EventArgs e)
+        {
+            FrmIncome frmIncome = new FrmIncome();
+            frmIncome.Show();
+            this.Hide();
+        }
+        private void lblIncome_MouseEnter(object sender, EventArgs e)
+        {
+            lblIncome.Location = new Point(lblIncome.Location.X - 5, lblIncome.Location.Y);
+            lblIncome.Font = new Font(lblIncome.Font.FontFamily, 13, FontStyle.Bold);
+        }
+        private void lblIncome_MouseLeave(object sender, EventArgs e)
+        {
+            lblIncome.Location = new Point(lblIncome.Location.X + 5, lblIncome.Location.Y);
+            lblIncome.Font = new Font(lblIncome.Font.FontFamily, 11, FontStyle.Bold);
         }
     }
 }

@@ -34,7 +34,7 @@
             this.btnLogut = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblExpense = new System.Windows.Forms.Label();
             this.lblMain = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.panel4.Controls.Add(this.btnLogut);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label14);
-            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.lblExpense);
             this.panel4.Controls.Add(this.lblMain);
             this.panel4.Location = new System.Drawing.Point(1, 0);
             this.panel4.Name = "panel4";
@@ -144,19 +144,22 @@
             this.label14.TabIndex = 4;
             this.label14.Text = "IZVJEŠTAJI";
             // 
-            // label12
+            // lblExpense
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblExpense.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.SystemColors.Window;
-            this.label12.Location = new System.Drawing.Point(75, 333);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(105, 21);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "TROŠKOVI";
+            this.lblExpense.AutoSize = true;
+            this.lblExpense.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lblExpense.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblExpense.Location = new System.Drawing.Point(75, 333);
+            this.lblExpense.Name = "lblExpense";
+            this.lblExpense.Size = new System.Drawing.Size(105, 21);
+            this.lblExpense.TabIndex = 2;
+            this.lblExpense.Text = "TROŠKOVI";
+            this.lblExpense.Click += new System.EventHandler(this.lblExpense_Click);
+            this.lblExpense.MouseEnter += new System.EventHandler(this.lblExpense_MouseEnter);
+            this.lblExpense.MouseLeave += new System.EventHandler(this.lblExpense_MouseLeave);
             // 
             // lblMain
             // 
@@ -427,7 +430,7 @@
         private System.Windows.Forms.Button btnLogut;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblExpense;
         private System.Windows.Forms.Label lblMain;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
