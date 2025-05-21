@@ -90,5 +90,34 @@ namespace Osobne_Financije.Repositories
             return result;
         }
 
+        public List<Income> GetIncomesByDateRange(int studentId, DateTime from, DateTime to)
+        {
+            List<Income> incomes = new List<Income>();
+            DB.OpenConnection();
+
+            string query = $@"SELECT i.IncomeId, i.StudentId, i.CategoryId, i.Amount, i.Date, i.Description, c.Name AS CategoryName FROM Incomes i INNER JOIN Categories c ON i.CategoryId = c.CategoryId WHERE i.StudentId = {studentId} AND i.Date BETWEEN '{from:yyyy-MM-dd}' AND '{to:yyyy-MM-dd}'";
+
+            SqlDataReader reader = DB.GetDataReader(query);
+
+            while (reader.Read())
+            {
+                Income income = new Income
+                {
+                    Id = (int)reader["IncomeId"],
+                    StudentId = (int)reader["StudentId"],
+                    CategoryId = (int)reader["CategoryId"],
+                    Amount = (decimal)reader["Amount"],
+                    Date = (DateTime)reader["Date"],
+                    Description = reader["Description"].ToString(),
+                    CategoryName = reader["CategoryName"].ToString()
+                };
+                incomes.Add(income);
+            }
+
+            DB.CloseConnection();
+            return incomes;
+        }
+
+
     }
 }
