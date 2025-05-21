@@ -1,9 +1,12 @@
-﻿using Osobne_Financije.Models;
+﻿using DBLayer;
+using Osobne_Financije.Models;
 using Osobne_Financije.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Osobne_Financije
 {
@@ -17,6 +20,7 @@ namespace Osobne_Financije
         private void FrmMain_Load(object sender, EventArgs e)
         {
             ShowSummary();
+            LoadChart();
         }
 
         private void lblIncomes_Click(object sender, EventArgs e)
@@ -66,6 +70,46 @@ namespace Osobne_Financije
             lblTotalIncomes.Text = totalIncome.ToString("0.00") + " €";
             lblTotalExpenses.Text = totalExpense.ToString("0.00") + " €";
             label2.Text = balance.ToString("0.00") + " €";
+        }
+
+        private void LoadChart()
+        {
+            chart1.Series.Clear();
+            chart1.Series.Add("Prihodi");
+            chart1.Series.Add("Troskovi");
+
+            chart1.Series["Prihodi"].ChartType = SeriesChartType.Column;
+            chart1.Series["Troskovi"].ChartType = SeriesChartType.Column;
+
+
+            int year = DateTime.Now.Year;
+            int month = DateTime.Now.Month;
+            int daysInMonth = DateTime.DaysInMonth(year, month);
+
+            chart1.ChartAreas[0].AxisX.Minimum = 0.5;
+            chart1.ChartAreas[0].AxisX.Maximum = daysInMonth + 0.5;
+            chart1.ChartAreas[0].AxisX.Interval = 1;
+            chart1.ChartAreas[0].AxisX.Title = "Dan u mjesecu";
+            chart1.ChartAreas[0].AxisX.LabelStyle.Format = "0";
+
+            chart1.ChartAreas[0].AxisY.Title = "Iznos (€)";
+          
+            int studentId = Session.LoggedStudent.Id;
+
+            var incomeRepo = new IncomeRepository();
+            var expenseRepo = new ExpenseRepository();
+
+            List<DailyAmount> incomeData = incomeRepo.GetIncomesForCurrentMonth(studentId);
+            List<DailyAmount> expenseData = expenseRepo.GetExpensesForCurrentMonth(studentId);
+
+            for (int day = 1; day <= daysInMonth; day++)
+            {
+                var income = incomeData.FirstOrDefault(x => x.Day == day)?.Amount ?? 0;
+                var expense = expenseData.FirstOrDefault(x => x.Day == day)?.Amount ?? 0;
+
+                chart1.Series["Prihodi"].Points.AddXY(day, income);
+                chart1.Series["Troskovi"].Points.AddXY(day, expense);
+            }
         }
 
     }
