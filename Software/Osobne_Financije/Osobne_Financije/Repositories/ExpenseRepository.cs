@@ -83,7 +83,7 @@ namespace Osobne_Financije.Repositories
             DB.CloseConnection();
             return result;
         }
-        public List<Expense> GetExpenseByDateRange(int studentId, DateTime from, DateTime to)
+        public List<Expense> GetExpensesByDateRange(int studentId, DateTime from, DateTime to)
         {
             List<Expense> expenses = new List<Expense>();
             DB.OpenConnection();

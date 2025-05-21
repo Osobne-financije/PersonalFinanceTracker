@@ -118,6 +118,5 @@ namespace Osobne_Financije.Repositories
             return incomes;
         }
 
-
     }
 }

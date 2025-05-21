@@ -1,11 +1,8 @@
-﻿using System;
+﻿using Osobne_Financije.Models;
+using Osobne_Financije.Repositories;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Osobne_Financije
@@ -44,6 +41,54 @@ namespace Osobne_Financije
                 dtpTo.Visible = false;
                 lblFrom.Visible = false;
                 lblTo.Visible = false;
+            }
+        }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            DateTime from, to;
+            DateTime today = DateTime.Today;
+
+            switch (cmbTimePeriod.SelectedItem.ToString())
+            {
+                case "Tjedan":
+                    from = today.AddDays(-7);
+                    to = today;
+                    break;
+                case "Mjesec":
+                    from = today.AddMonths(-1);
+                    to = today;
+                    break;
+                case "6 mjeseci":
+                    from = today.AddMonths(-6);
+                    to = today;
+                    break;
+                case "Godina":
+                    from = today.AddYears(-1);
+                    to = today;
+                    break;
+                case "Određeno razdoblje":
+                    from = dtpFrom.Value.Date;
+                    to = dtpTo.Value.Date;
+                    break;
+                default:
+                    MessageBox.Show("Odaberite vremensko razdoblje.");
+                    return;
+            }
+
+            int studentId = Session.LoggedStudent.Id;
+
+            if (cmbDataType.SelectedItem.ToString() == "Prihodi")
+            {
+                IncomeRepository incomeRepo = new IncomeRepository();
+                var prihodi = incomeRepo.GetIncomesByDateRange(studentId, from, to);
+                dgvReport.DataSource = prihodi;
+            }
+            else
+            {
+                ExpenseRepository expenseRepo = new ExpenseRepository();
+                var troskovi = expenseRepo.GetExpensesByDateRange(studentId, from, to);
+                dgvReport.DataSource = troskovi;
             }
         }
     }

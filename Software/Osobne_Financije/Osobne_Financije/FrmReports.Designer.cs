@@ -46,9 +46,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbDataType = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pcReports = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvReport = new System.Windows.Forms.DataGridView();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.lblFrom = new System.Windows.Forms.Label();
             this.lblTo = new System.Windows.Forms.Label();
@@ -58,9 +58,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcReports)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -229,45 +229,45 @@
             this.cmbDataType.Size = new System.Drawing.Size(152, 24);
             this.cmbDataType.TabIndex = 34;
             // 
-            // chart1
+            // pcReports
             // 
-            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcReports.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.pcReports.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(1024, 92);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            this.pcReports.Legends.Add(legend1);
+            this.pcReports.Location = new System.Drawing.Point(1024, 92);
+            this.pcReports.Name = "pcReports";
+            this.pcReports.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(312, 276);
-            this.chart1.TabIndex = 37;
-            this.chart1.Text = "chart1";
+            this.pcReports.Series.Add(series1);
+            this.pcReports.Size = new System.Drawing.Size(312, 276);
+            this.pcReports.TabIndex = 37;
+            this.pcReports.Text = "chart1";
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgvReport);
             this.panel1.Location = new System.Drawing.Point(269, 394);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1067, 293);
             this.panel1.TabIndex = 38;
             // 
-            // dataGridView1
+            // dgvReport
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1067, 293);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvReport.Location = new System.Drawing.Point(0, 0);
+            this.dgvReport.Name = "dgvReport";
+            this.dgvReport.RowHeadersWidth = 51;
+            this.dgvReport.RowTemplate.Height = 24;
+            this.dgvReport.Size = new System.Drawing.Size(1067, 293);
+            this.dgvReport.TabIndex = 0;
             // 
             // btnGenerate
             // 
@@ -280,6 +280,7 @@
             this.btnGenerate.TabIndex = 40;
             this.btnGenerate.Text = " GENERIRAJ ";
             this.btnGenerate.UseVisualStyleBackColor = false;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
             // lblFrom
             // 
@@ -331,7 +332,7 @@
             this.Controls.Add(this.lblFrom);
             this.Controls.Add(this.btnGenerate);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.pcReports);
             this.Controls.Add(this.cmbDataType);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbTimePeriod);
@@ -347,9 +348,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcReports)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,9 +373,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbDataType;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart pcReports;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvReport;
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.Label lblTo;
