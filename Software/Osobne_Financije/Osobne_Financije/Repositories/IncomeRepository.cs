@@ -70,5 +70,25 @@ namespace Osobne_Financije.Repositories
                 return Convert.ToDecimal(result);
         }
 
+        public List<DailyAmount> GetIncomesForCurrentMonth(int studentId)
+        {
+            List<DailyAmount> result = new List<DailyAmount>();
+            DB.OpenConnection();
+            string query = $@"SELECT DAY(Date) AS Dan, SUM(Amount) AS Ukupno FROM Incomes WHERE StudentId = {studentId} AND MONTH(Date) = MONTH(GETDATE()) AND YEAR(Date) = YEAR(GETDATE()) GROUP BY DAY(Date) ORDER BY Dan";
+            var reader = DB.GetDataReader(query);
+
+            while (reader.Read())
+            {
+                result.Add(new DailyAmount
+                {
+                    Day = (int)reader["Dan"],
+                    Amount = (decimal)reader["Ukupno"]
+                });
+            }
+
+            DB.CloseConnection();
+            return result;
+        }
+
     }
 }
