@@ -58,7 +58,7 @@ namespace Osobne_Financije
 
             if (isAdded)
             {
-                MessageBox.Show("Prihod dodan!");
+                MessageBox.Show("Trošak dodan!");
                 txtAmount.Clear();
                 txtDescription.Clear();
                 ShowExpenses();
@@ -66,7 +66,7 @@ namespace Osobne_Financije
             }
             else
             {
-                MessageBox.Show("Greška prilikom dodavanja prihoda.");
+                MessageBox.Show("Greška prilikom dodavanja troška.");
             }
         }
 
@@ -160,8 +160,7 @@ namespace Osobne_Financije
             decimal total = repository.GetTotalExpenseByStudentId(Session.LoggedStudent.Id);
             txtTotalExpense.Text = total.ToString("0.00");
         }
-
-        private void btnLogut_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             Session.LoggedStudent = null;
             this.Hide();

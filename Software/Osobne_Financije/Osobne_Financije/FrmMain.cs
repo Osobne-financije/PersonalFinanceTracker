@@ -112,5 +112,13 @@ namespace Osobne_Financije
             }
         }
 
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.LoggedStudent = null;
+            this.Hide();
+            FrmLogin loginForm = new FrmLogin();
+            loginForm.Show();
+            this.Close();
+        }
     }
 }

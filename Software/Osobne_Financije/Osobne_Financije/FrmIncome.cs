@@ -167,7 +167,7 @@ namespace Osobne_Financije
             txtTotalIncome.Text = total.ToString("0.00");
         }
 
-        private void btnLogut_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             Session.LoggedStudent = null;
             this.Hide();
@@ -211,5 +211,6 @@ namespace Osobne_Financije
             lblExpense.Location = new Point(lblExpense.Location.X + 5, lblExpense.Location.Y);
             lblExpense.Font = new Font(lblExpense.Font.FontFamily, 11, FontStyle.Bold);
         }
+
     }
 }

@@ -1,0 +1,384 @@
+﻿namespace Osobne_Financije
+{
+    partial class FrmReports
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.lblSGoals = new System.Windows.Forms.Label();
+            this.lblReports = new System.Windows.Forms.Label();
+            this.lblExpenses = new System.Windows.Forms.Label();
+            this.lblIncomes = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbTimePeriod = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbDataType = new System.Windows.Forms.ComboBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnGenerate = new System.Windows.Forms.Button();
+            this.lblFrom = new System.Windows.Forms.Label();
+            this.lblTo = new System.Windows.Forms.Label();
+            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtpTo = new System.Windows.Forms.DateTimePicker();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel4.BackColor = System.Drawing.Color.Navy;
+            this.panel4.Controls.Add(this.pictureBox2);
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Controls.Add(this.btnLogout);
+            this.panel4.Controls.Add(this.lblSGoals);
+            this.panel4.Controls.Add(this.lblReports);
+            this.panel4.Controls.Add(this.lblExpenses);
+            this.panel4.Controls.Add(this.lblIncomes);
+            this.panel4.Location = new System.Drawing.Point(-1, -1);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(264, 702);
+            this.panel4.TabIndex = 19;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox2.Image = global::Osobne_Financije.Properties.Resources.Untitled_design__7_1;
+            this.pictureBox2.Location = new System.Drawing.Point(25, 650);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 38);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Osobne_Financije.Properties.Resources.Untitled_design__4_3;
+            this.pictureBox1.Location = new System.Drawing.Point(65, 51);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 108);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLogout.BackColor = System.Drawing.Color.Red;
+            this.btnLogout.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnLogout.Location = new System.Drawing.Point(74, 650);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(118, 38);
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.Text = "ODJAVA";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            // 
+            // lblSGoals
+            // 
+            this.lblSGoals.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSGoals.AutoSize = true;
+            this.lblSGoals.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lblSGoals.ForeColor = System.Drawing.Color.White;
+            this.lblSGoals.Location = new System.Drawing.Point(41, 414);
+            this.lblSGoals.Name = "lblSGoals";
+            this.lblSGoals.Size = new System.Drawing.Size(167, 21);
+            this.lblSGoals.TabIndex = 6;
+            this.lblSGoals.Text = "CILJEVI ŠTEDNJE";
+            this.lblSGoals.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblReports
+            // 
+            this.lblReports.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblReports.AutoSize = true;
+            this.lblReports.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lblReports.ForeColor = System.Drawing.Color.White;
+            this.lblReports.Location = new System.Drawing.Point(70, 500);
+            this.lblReports.Name = "lblReports";
+            this.lblReports.Size = new System.Drawing.Size(110, 21);
+            this.lblReports.TabIndex = 4;
+            this.lblReports.Text = "IZVJEŠTAJI";
+            this.lblReports.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblExpenses
+            // 
+            this.lblExpenses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblExpenses.AutoSize = true;
+            this.lblExpenses.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lblExpenses.ForeColor = System.Drawing.Color.White;
+            this.lblExpenses.Location = new System.Drawing.Point(75, 333);
+            this.lblExpenses.Name = "lblExpenses";
+            this.lblExpenses.Size = new System.Drawing.Size(105, 21);
+            this.lblExpenses.TabIndex = 2;
+            this.lblExpenses.Text = "TROŠKOVI";
+            this.lblExpenses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblIncomes
+            // 
+            this.lblIncomes.AutoSize = true;
+            this.lblIncomes.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lblIncomes.ForeColor = System.Drawing.Color.White;
+            this.lblIncomes.Location = new System.Drawing.Point(85, 249);
+            this.lblIncomes.Name = "lblIncomes";
+            this.lblIncomes.Size = new System.Drawing.Size(85, 21);
+            this.lblIncomes.TabIndex = 1;
+            this.lblIncomes.Text = "PRIHODI";
+            this.lblIncomes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label11.Location = new System.Drawing.Point(67, 26);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(180, 35);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "IZVJEŠTAJI";
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.SystemColors.Menu;
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Location = new System.Drawing.Point(262, -1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1086, 87);
+            this.panel3.TabIndex = 20;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(331, 137);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(195, 21);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Vremensko razdoblje";
+            // 
+            // cmbTimePeriod
+            // 
+            this.cmbTimePeriod.FormattingEnabled = true;
+            this.cmbTimePeriod.Location = new System.Drawing.Point(546, 137);
+            this.cmbTimePeriod.Name = "cmbTimePeriod";
+            this.cmbTimePeriod.Size = new System.Drawing.Size(152, 24);
+            this.cmbTimePeriod.TabIndex = 32;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(331, 186);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 21);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Vrsta podatka";
+            // 
+            // cmbDataType
+            // 
+            this.cmbDataType.FormattingEnabled = true;
+            this.cmbDataType.Location = new System.Drawing.Point(546, 187);
+            this.cmbDataType.Name = "cmbDataType";
+            this.cmbDataType.Size = new System.Drawing.Size(152, 24);
+            this.cmbDataType.TabIndex = 34;
+            // 
+            // chart1
+            // 
+            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(1024, 92);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(312, 276);
+            this.chart1.TabIndex = 37;
+            this.chart1.Text = "chart1";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Location = new System.Drawing.Point(269, 394);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1067, 293);
+            this.panel1.TabIndex = 38;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1067, 293);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // btnGenerate
+            // 
+            this.btnGenerate.BackColor = System.Drawing.Color.Navy;
+            this.btnGenerate.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerate.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnGenerate.Location = new System.Drawing.Point(546, 234);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(140, 35);
+            this.btnGenerate.TabIndex = 40;
+            this.btnGenerate.Text = " GENERIRAJ ";
+            this.btnGenerate.UseVisualStyleBackColor = false;
+            // 
+            // lblFrom
+            // 
+            this.lblFrom.AutoSize = true;
+            this.lblFrom.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFrom.Location = new System.Drawing.Point(731, 136);
+            this.lblFrom.Name = "lblFrom";
+            this.lblFrom.Size = new System.Drawing.Size(105, 21);
+            this.lblFrom.TabIndex = 41;
+            this.lblFrom.Text = "Od datuma";
+            this.lblFrom.Visible = false;
+            // 
+            // lblTo
+            // 
+            this.lblTo.AutoSize = true;
+            this.lblTo.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTo.Location = new System.Drawing.Point(732, 190);
+            this.lblTo.Name = "lblTo";
+            this.lblTo.Size = new System.Drawing.Size(104, 21);
+            this.lblTo.TabIndex = 42;
+            this.lblTo.Text = "Do datuma";
+            this.lblTo.Visible = false;
+            // 
+            // dtpFrom
+            // 
+            this.dtpFrom.Location = new System.Drawing.Point(842, 139);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.Size = new System.Drawing.Size(21, 22);
+            this.dtpFrom.TabIndex = 43;
+            this.dtpFrom.Visible = false;
+            // 
+            // dtpTo
+            // 
+            this.dtpTo.Location = new System.Drawing.Point(842, 190);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Size = new System.Drawing.Size(21, 22);
+            this.dtpTo.TabIndex = 44;
+            this.dtpTo.Visible = false;
+            // 
+            // FrmReports
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(1348, 699);
+            this.Controls.Add(this.dtpTo);
+            this.Controls.Add(this.dtpFrom);
+            this.Controls.Add(this.lblTo);
+            this.Controls.Add(this.lblFrom);
+            this.Controls.Add(this.btnGenerate);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.cmbDataType);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmbTimePeriod);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
+            this.Name = "FrmReports";
+            this.Text = "FrmReports";
+            this.Load += new System.EventHandler(this.FrmReports_Load);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Label lblSGoals;
+        private System.Windows.Forms.Label lblReports;
+        private System.Windows.Forms.Label lblExpenses;
+        private System.Windows.Forms.Label lblIncomes;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbTimePeriod;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbDataType;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnGenerate;
+        private System.Windows.Forms.Label lblFrom;
+        private System.Windows.Forms.Label lblTo;
+        private System.Windows.Forms.DateTimePicker dtpFrom;
+        private System.Windows.Forms.DateTimePicker dtpTo;
+    }
+}

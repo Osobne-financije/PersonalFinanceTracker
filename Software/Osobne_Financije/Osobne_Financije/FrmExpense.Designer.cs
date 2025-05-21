@@ -31,7 +31,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLogut = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.lblIncome = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@
             this.panel4.BackColor = System.Drawing.Color.Navy;
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Controls.Add(this.btnLogut);
+            this.panel4.Controls.Add(this.btnLogout);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.lblIncome);
@@ -102,19 +102,19 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // btnLogut
+            // btnLogout
             // 
-            this.btnLogut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLogut.BackColor = System.Drawing.Color.Red;
-            this.btnLogut.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogut.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnLogut.Location = new System.Drawing.Point(74, 650);
-            this.btnLogut.Name = "btnLogut";
-            this.btnLogut.Size = new System.Drawing.Size(118, 38);
-            this.btnLogut.TabIndex = 7;
-            this.btnLogut.Text = "ODJAVA";
-            this.btnLogut.UseVisualStyleBackColor = false;
-            this.btnLogut.Click += new System.EventHandler(this.btnLogut_Click);
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLogout.BackColor = System.Drawing.Color.Red;
+            this.btnLogout.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnLogout.Location = new System.Drawing.Point(74, 650);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(118, 38);
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.Text = "ODJAVA";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // label7
             // 
@@ -426,7 +426,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnLogut;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblIncome;

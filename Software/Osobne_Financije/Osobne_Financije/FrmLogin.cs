@@ -19,8 +19,6 @@ namespace Osobne_Financije
             InitializeComponent();
         }
 
- 
-
         private void cbPassword_CheckedChanged(object sender, EventArgs e)
         {
             if(cbPassword.Checked)
@@ -49,10 +47,11 @@ namespace Osobne_Financije
 
             if (student != null)
             {
-                Session.LoggedStudent = student; 
+                Session.LoggedStudent = student;
                 MessageBox.Show("Prijava uspješna!");
+
                 this.Hide();
-                new FrmMain().Show(); 
+                new FrmMain().Show();
             }
             else
             {
