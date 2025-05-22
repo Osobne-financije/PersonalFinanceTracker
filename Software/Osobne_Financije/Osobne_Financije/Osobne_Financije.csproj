@@ -82,6 +82,12 @@
     <Compile Include="FrmReports.Designer.cs">
       <DependentUpon>FrmReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSavingsGoals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSavingsGoals.Designer.cs">
+      <DependentUpon>FrmSavingsGoals.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSignup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,15 +97,19 @@
     <Compile Include="Helpers\HashHelper.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CategoryAmount.cs" />
+    <Compile Include="Models\CategoryLimit.cs" />
     <Compile Include="Models\DailyAmount.cs" />
     <Compile Include="Models\Expense.cs" />
     <Compile Include="Models\Income.cs" />
+    <Compile Include="Models\SavingsGoal.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CategoryLimitRepository.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
     <Compile Include="Repositories\ExpenseRepository.cs" />
     <Compile Include="Repositories\IncomeRepository.cs" />
+    <Compile Include="Repositories\SavingsGoalRepository.cs" />
     <Compile Include="Repositories\StudentRepository.cs" />
     <Compile Include="Session.cs" />
     <EmbeddedResource Include="FrmExpense.resx">
@@ -116,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReports.resx">
       <DependentUpon>FrmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSavingsGoals.resx">
+      <DependentUpon>FrmSavingsGoals.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSignup.resx">
       <DependentUpon>FrmSignup.cs</DependentUpon>
