@@ -120,5 +120,22 @@ namespace Osobne_Financije
             loginForm.Show();
             this.Close();
         }
+
+        private void lblReports_Click(object sender, EventArgs e)
+        {
+            FrmReports reportForm = new FrmReports();
+            reportForm.Show();
+            this.Hide();
+        }
+        private void lblReports_MouseEnter(object sender, EventArgs e)
+        {
+            lblReports.Location = new Point(lblReports.Location.X - 5, lblReports.Location.Y);
+            lblReports.Font = new Font(lblReports.Font.FontFamily, 13, FontStyle.Bold);
+        }
+        private void lblReports_MouseLeave(object sender, EventArgs e)
+        {
+            lblReports.Location = new Point(lblReports.Location.X + 5, lblReports.Location.Y);
+            lblReports.Font = new Font(lblReports.Font.FontFamily, 11, FontStyle.Bold);
+        }
     }
 }

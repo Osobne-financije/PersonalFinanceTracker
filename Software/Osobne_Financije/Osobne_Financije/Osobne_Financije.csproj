@@ -90,6 +90,7 @@
     </Compile>
     <Compile Include="Helpers\HashHelper.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\CategoryAmount.cs" />
     <Compile Include="Models\DailyAmount.cs" />
     <Compile Include="Models\Expense.cs" />
     <Compile Include="Models\Income.cs" />

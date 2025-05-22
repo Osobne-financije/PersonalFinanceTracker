@@ -88,7 +88,7 @@ namespace Osobne_Financije.Repositories
             List<Expense> expenses = new List<Expense>();
             DB.OpenConnection();
 
-            string query = $@"SELECT i.ExpenseeId, i.StudentId, i.CategoryId, i.Amount, i.Date, i.Description, c.Name AS CategoryName FROM Expense i INNER JOIN Categories c ON i.CategoryId = c.CategoryId WHERE i.StudentId = {studentId} AND i.Date BETWEEN '{from:yyyy-MM-dd}' AND '{to:yyyy-MM-dd}'";
+            string query = $@"SELECT i.ExpenseId, i.StudentId, i.CategoryId, i.Amount, i.Date, i.Description, c.Name AS CategoryName FROM Expenses i INNER JOIN Categories c ON i.CategoryId = c.CategoryId WHERE i.StudentId = {studentId} AND i.Date BETWEEN '{from:yyyy-MM-dd}' AND '{to:yyyy-MM-dd}'";
 
             SqlDataReader reader = DB.GetDataReader(query);
 

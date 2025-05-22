@@ -118,9 +118,14 @@ namespace Osobne_Financije
             dgvExpenses.DataSource = null;
             dgvExpenses.DataSource = expense;
 
-            dgvExpenses.Columns["Description"].DisplayIndex = 0;
+            dgvExpenses.Columns["CategoryName"].HeaderText = "Kategorija";
+            dgvExpenses.Columns["CategoryName"].DisplayIndex = 0;
+            dgvExpenses.Columns["Amount"].HeaderText = "Iznos";
             dgvExpenses.Columns["Amount"].DisplayIndex = 1;
-            dgvExpenses.Columns["Date"].DisplayIndex = 2;
+            dgvExpenses.Columns["Description"].HeaderText = "Opis";
+            dgvExpenses.Columns["Description"].DisplayIndex = 2;
+            dgvExpenses.Columns["Date"].HeaderText = "Datum";
+            dgvExpenses.Columns["Date"].DisplayIndex = 3;
             dgvExpenses.Columns["Id"].Visible = false;
             dgvExpenses.Columns["StudentId"].Visible = false;
             dgvExpenses.Columns["CategoryId"].Visible = false;
@@ -203,6 +208,22 @@ namespace Osobne_Financije
         {
             lblIncome.Location = new Point(lblIncome.Location.X + 5, lblIncome.Location.Y);
             lblIncome.Font = new Font(lblIncome.Font.FontFamily, 11, FontStyle.Bold);
+        }
+        private void lblReports_Click(object sender, EventArgs e)
+        {
+            FrmReports reportForm = new FrmReports();
+            reportForm.Show();
+            this.Hide();
+        }
+        private void lblReports_MouseEnter(object sender, EventArgs e)
+        {
+            lblReports.Location = new Point(lblReports.Location.X - 5, lblReports.Location.Y);
+            lblReports.Font = new Font(lblReports.Font.FontFamily, 13, FontStyle.Bold);
+        }
+        private void lblReports_MouseLeave(object sender, EventArgs e)
+        {
+            lblReports.Location = new Point(lblReports.Location.X + 5, lblReports.Location.Y);
+            lblReports.Font = new Font(lblReports.Font.FontFamily, 11, FontStyle.Bold);
         }
     }
 }
