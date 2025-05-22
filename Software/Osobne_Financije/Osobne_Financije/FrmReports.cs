@@ -213,5 +213,13 @@ namespace Osobne_Financije
             lblExpenses.Font = new Font(lblExpenses.Font.FontFamily, 11, FontStyle.Bold);
         }
 
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.LoggedStudent = null;
+            this.Hide();
+            FrmLogin loginForm = new FrmLogin();
+            loginForm.ShowDialog();
+            this.Close();
+        }
     }
 }
