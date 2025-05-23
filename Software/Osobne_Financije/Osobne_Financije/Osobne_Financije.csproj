@@ -101,6 +101,7 @@
     <Compile Include="Models\DailyAmount.cs" />
     <Compile Include="Models\Expense.cs" />
     <Compile Include="Models\Income.cs" />
+    <Compile Include="Models\LimitReport.cs" />
     <Compile Include="Models\SavingsGoal.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Program.cs" />
