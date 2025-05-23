@@ -14,6 +14,11 @@ Kako bi im se olakšalo vođenje financija, ovaj softver će im omogućiti jedno
 
 ![image](https://github.com/user-attachments/assets/cf629498-a780-4469-9f5c-78a785e31f62)  ![image](https://github.com/user-attachments/assets/5fbbc50e-37be-4ab0-adac-a1f2f388c89c)  ![image](https://github.com/user-attachments/assets/03703e1a-bcfd-41b1-93ec-428cd0a3bf26)
 
+![image](https://github.com/user-attachments/assets/c9d7e946-3b80-4db3-82ef-ab581d842855)
+![image](https://github.com/user-attachments/assets/31d2f8c4-3187-4598-8a7b-2ee0db5bf698)
+
+
+
 
 
 
