@@ -44,5 +44,16 @@ namespace Osobne_Financije.Repositories
             DB.CloseConnection();
             return limits;
         }
+        public bool UpdateLimit(CategoryLimit limit)
+        {
+            DB.OpenConnection();
+
+            string query = $"UPDATE CategoryLimits SET LimitAmount = {limit.LimitAmount.ToString(System.Globalization.CultureInfo.InvariantCulture)} WHERE LimitId = {limit.LimitId}";
+
+            int result = DB.ExecuteCommand(query);
+            DB.CloseConnection();
+
+            return result > 0;
+        }
     }
 }
