@@ -32,6 +32,8 @@ FO5 |Prikaz statistike | Korisniku se prikazuju statistički podaci u obliku pie
 FO6 | Dodavanje vlastitih kategorija | Aplikacija omogućuje korisniku dodavanje novih kategorija prihoda i troškova prema vlastitim potrebama.
 FO7 | Postavljanje cilja štednje | Aplikacija omogućuje korisniku postavljanje financijskog cilja (npr. 2000 €) koji se prikazuje na formi zajedno s trenutnom uštedom.
 FO8 | Izvještaji o financijama po vremenskim razdobljima | Korisnik može generirati izvještaje o prihodima i rashodima za odabrani vremenski period (tjedan, mjesec, 6 mjeseci, godina ili određeni datumi). Podaci se prikazuju u obliku tortnog grafikona i tablice s podacima po kategorijama.
+NF01 | Jednostavno korisničko sučelje | Sučelje mora biti intuitivno, jasno i prilagođeno korisnicima bez tehničkog predznanja.
+NF02 | Sigurnost korisničkih podataka | Podaci korisnika, uključujući lozinke, moraju biti zaštićeni i pohranjeni u kriptiranom obliku.
 
 ## Tehnologije i oprema
 U projektu koristim .NET Framework 4.8 i C# programski jezik uz Windows Forms (WinForms) za izradu korisničkog sučelja. Baza podataka izrađena je u Microsoft SQL Serveru, a pristup podacima realiziran je korištenjem ADO.NET i DBLayer klase s vježbi.
