@@ -32,10 +32,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.lblSGoals = new System.Windows.Forms.Label();
-            this.lblReports = new System.Windows.Forms.Label();
             this.lblExpenses = new System.Windows.Forms.Label();
+            this.lblReports = new System.Windows.Forms.Label();
             this.lblIncomes = new System.Windows.Forms.Label();
+            this.lblMain = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -70,10 +70,10 @@
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.btnLogout);
-            this.panel4.Controls.Add(this.lblSGoals);
-            this.panel4.Controls.Add(this.lblReports);
             this.panel4.Controls.Add(this.lblExpenses);
+            this.panel4.Controls.Add(this.lblReports);
             this.panel4.Controls.Add(this.lblIncomes);
+            this.panel4.Controls.Add(this.lblMain);
             this.panel4.Location = new System.Drawing.Point(-1, -1);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(264, 702);
@@ -112,21 +112,25 @@
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "ODJAVA";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // lblSGoals
+            // lblExpenses
             // 
-            this.lblSGoals.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblExpenses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSGoals.AutoSize = true;
-            this.lblSGoals.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            this.lblSGoals.ForeColor = System.Drawing.Color.White;
-            this.lblSGoals.Location = new System.Drawing.Point(41, 414);
-            this.lblSGoals.Name = "lblSGoals";
-            this.lblSGoals.Size = new System.Drawing.Size(167, 21);
-            this.lblSGoals.TabIndex = 6;
-            this.lblSGoals.Text = "CILJEVI ŠTEDNJE";
-            this.lblSGoals.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblExpenses.AutoSize = true;
+            this.lblExpenses.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lblExpenses.ForeColor = System.Drawing.Color.White;
+            this.lblExpenses.Location = new System.Drawing.Point(70, 414);
+            this.lblExpenses.Name = "lblExpenses";
+            this.lblExpenses.Size = new System.Drawing.Size(105, 21);
+            this.lblExpenses.TabIndex = 6;
+            this.lblExpenses.Text = "TROŠKOVI";
+            this.lblExpenses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblExpenses.Click += new System.EventHandler(this.lblExpenses_Click);
+            this.lblExpenses.MouseEnter += new System.EventHandler(this.lblExpenses_MouseEnter);
+            this.lblExpenses.MouseLeave += new System.EventHandler(this.lblExpense_MouseLeave);
             // 
             // lblReports
             // 
@@ -142,33 +146,42 @@
             this.lblReports.TabIndex = 4;
             this.lblReports.Text = "IZVJEŠTAJI";
             this.lblReports.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblExpenses
-            // 
-            this.lblExpenses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblExpenses.AutoSize = true;
-            this.lblExpenses.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            this.lblExpenses.ForeColor = System.Drawing.Color.White;
-            this.lblExpenses.Location = new System.Drawing.Point(75, 333);
-            this.lblExpenses.Name = "lblExpenses";
-            this.lblExpenses.Size = new System.Drawing.Size(105, 21);
-            this.lblExpenses.TabIndex = 2;
-            this.lblExpenses.Text = "TROŠKOVI";
-            this.lblExpenses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblReports.Click += new System.EventHandler(this.lblReports_Click);
+            this.lblReports.MouseEnter += new System.EventHandler(this.lblReports_MouseEnter);
+            this.lblReports.MouseLeave += new System.EventHandler(this.lblReports_MouseLeave);
             // 
             // lblIncomes
             // 
+            this.lblIncomes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIncomes.AutoSize = true;
             this.lblIncomes.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.lblIncomes.ForeColor = System.Drawing.Color.White;
-            this.lblIncomes.Location = new System.Drawing.Point(85, 249);
+            this.lblIncomes.Location = new System.Drawing.Point(80, 333);
             this.lblIncomes.Name = "lblIncomes";
             this.lblIncomes.Size = new System.Drawing.Size(85, 21);
-            this.lblIncomes.TabIndex = 1;
+            this.lblIncomes.TabIndex = 2;
             this.lblIncomes.Text = "PRIHODI";
             this.lblIncomes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblIncomes.Click += new System.EventHandler(this.lblIncomes_Click);
+            this.lblIncomes.MouseEnter += new System.EventHandler(this.lblIncomes_MouseEnter);
+            this.lblIncomes.MouseLeave += new System.EventHandler(this.lblIncomes_MouseLeave);
+            // 
+            // lblMain
+            // 
+            this.lblMain.AutoSize = true;
+            this.lblMain.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lblMain.ForeColor = System.Drawing.Color.White;
+            this.lblMain.Location = new System.Drawing.Point(77, 251);
+            this.lblMain.Name = "lblMain";
+            this.lblMain.Size = new System.Drawing.Size(98, 21);
+            this.lblMain.TabIndex = 1;
+            this.lblMain.Text = "POČETNA";
+            this.lblMain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMain.Click += new System.EventHandler(this.lblMain_Click);
+            this.lblMain.MouseEnter += new System.EventHandler(this.lblMain_MouseEnter);
+            this.lblMain.MouseLeave += new System.EventHandler(this.lblMain_MouseLeave);
             // 
             // label11
             // 
@@ -233,6 +246,7 @@
             this.btnGoal.TabIndex = 39;
             this.btnGoal.Text = "POSTAVI CILJ";
             this.btnGoal.UseVisualStyleBackColor = false;
+            this.btnGoal.Click += new System.EventHandler(this.btnGoal_Click);
             // 
             // cmbCategories
             // 
@@ -347,6 +361,7 @@
             this.btnLimit.TabIndex = 45;
             this.btnLimit.Text = "DODAJ LIMIT";
             this.btnLimit.UseVisualStyleBackColor = false;
+            this.btnLimit.Click += new System.EventHandler(this.btnLimit_Click);
             // 
             // panel1
             // 
@@ -361,6 +376,7 @@
             // 
             // dgvLimits
             // 
+            this.dgvLimits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLimits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLimits.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLimits.Location = new System.Drawing.Point(0, 0);
@@ -389,8 +405,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmSavingsGoals";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmSavingsGoals";
+            this.Load += new System.EventHandler(this.FrmSavingsGoals_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -410,10 +429,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Label lblSGoals;
-        private System.Windows.Forms.Label lblReports;
         private System.Windows.Forms.Label lblExpenses;
+        private System.Windows.Forms.Label lblReports;
         private System.Windows.Forms.Label lblIncomes;
+        private System.Windows.Forms.Label lblMain;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;

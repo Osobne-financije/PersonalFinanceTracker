@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblExpenses = new System.Windows.Forms.Label();
-            this.lblGoals = new System.Windows.Forms.Label();
+            this.lblSGoals = new System.Windows.Forms.Label();
             this.lblIncomes = new System.Windows.Forms.Label();
             this.lblMain = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -72,7 +72,7 @@
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.btnLogout);
             this.panel4.Controls.Add(this.lblExpenses);
-            this.panel4.Controls.Add(this.lblGoals);
+            this.panel4.Controls.Add(this.lblSGoals);
             this.panel4.Controls.Add(this.lblIncomes);
             this.panel4.Controls.Add(this.lblMain);
             this.panel4.Location = new System.Drawing.Point(-1, -1);
@@ -133,20 +133,23 @@
             this.lblExpenses.MouseEnter += new System.EventHandler(this.lblExpenses_MouseEnter);
             this.lblExpenses.MouseLeave += new System.EventHandler(this.lblExpenses_MouseLeave);
             // 
-            // lblGoals
+            // lblSGoals
             // 
-            this.lblGoals.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblSGoals.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblGoals.AutoSize = true;
-            this.lblGoals.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            this.lblGoals.ForeColor = System.Drawing.Color.White;
-            this.lblGoals.Location = new System.Drawing.Point(41, 500);
-            this.lblGoals.Name = "lblGoals";
-            this.lblGoals.Size = new System.Drawing.Size(167, 21);
-            this.lblGoals.TabIndex = 4;
-            this.lblGoals.Text = "CILJEVI ŠTEDNJE";
-            this.lblGoals.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSGoals.AutoSize = true;
+            this.lblSGoals.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lblSGoals.ForeColor = System.Drawing.Color.White;
+            this.lblSGoals.Location = new System.Drawing.Point(41, 500);
+            this.lblSGoals.Name = "lblSGoals";
+            this.lblSGoals.Size = new System.Drawing.Size(167, 21);
+            this.lblSGoals.TabIndex = 4;
+            this.lblSGoals.Text = "CILJEVI ŠTEDNJE";
+            this.lblSGoals.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSGoals.Click += new System.EventHandler(this.lblSGoals_Click);
+            this.lblSGoals.MouseEnter += new System.EventHandler(this.lblSGoals_MouseEnter);
+            this.lblSGoals.MouseLeave += new System.EventHandler(this.lblSGoals_MouseLeave);
             // 
             // lblIncomes
             // 
@@ -242,18 +245,18 @@
             // chartReports
             // 
             this.chartReports.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.Name = "ChartArea1";
-            this.chartReports.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartReports.Legends.Add(legend3);
+            chartArea2.Name = "ChartArea1";
+            this.chartReports.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartReports.Legends.Add(legend2);
             this.chartReports.Location = new System.Drawing.Point(1024, 92);
             this.chartReports.Name = "chartReports";
             this.chartReports.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartReports.Series.Add(series3);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartReports.Series.Add(series2);
             this.chartReports.Size = new System.Drawing.Size(312, 276);
             this.chartReports.TabIndex = 37;
             this.chartReports.Text = "chart1";
@@ -350,7 +353,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmReports";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmReports";
             this.Load += new System.EventHandler(this.FrmReports_Load);
             this.panel4.ResumeLayout(false);
@@ -374,7 +379,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lblExpenses;
-        private System.Windows.Forms.Label lblGoals;
+        private System.Windows.Forms.Label lblSGoals;
         private System.Windows.Forms.Label lblIncomes;
         private System.Windows.Forms.Label lblMain;
         private System.Windows.Forms.Label label11;

@@ -237,6 +237,9 @@
             this.lblSGoals.TabIndex = 6;
             this.lblSGoals.Text = "CILJEVI ŠTEDNJE";
             this.lblSGoals.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSGoals.Click += new System.EventHandler(this.lblSGoals_Click);
+            this.lblSGoals.MouseEnter += new System.EventHandler(this.lblSGoals_MouseEnter);
+            this.lblSGoals.MouseLeave += new System.EventHandler(this.lblSGoals_MouseLeave);
             // 
             // lblReports
             // 

@@ -212,6 +212,22 @@ namespace Osobne_Financije
             lblExpenses.Location = new Point(lblExpenses.Location.X + 5, lblExpenses.Location.Y);
             lblExpenses.Font = new Font(lblExpenses.Font.FontFamily, 11, FontStyle.Bold);
         }
+        private void lblSGoals_Click(object sender, EventArgs e)
+        {
+            FrmSavingsGoals savingsGoalsForm = new FrmSavingsGoals();
+            savingsGoalsForm.Show();
+            this.Hide();
+        }
+        private void lblSGoals_MouseEnter(object sender, EventArgs e)
+        {
+            lblSGoals.Location = new Point(lblSGoals.Location.X - 5, lblSGoals.Location.Y);
+            lblSGoals.Font = new Font(lblSGoals.Font.FontFamily, 13, FontStyle.Bold);
+        }
+        private void lblSGoals_MouseLeave(object sender, EventArgs e)
+        {
+            lblSGoals.Location = new Point(lblSGoals.Location.X + 5, lblSGoals.Location.Y);
+            lblSGoals.Font = new Font(lblSGoals.Font.FontFamily, 11, FontStyle.Bold);
+        }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {

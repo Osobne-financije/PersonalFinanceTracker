@@ -30,7 +30,7 @@
         {
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblSGoals = new System.Windows.Forms.Label();
             this.lblReports = new System.Windows.Forms.Label();
             this.lblExpense = new System.Windows.Forms.Label();
             this.lblMain = new System.Windows.Forms.Label();
@@ -72,7 +72,7 @@
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.btnLogout);
-            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.lblSGoals);
             this.panel4.Controls.Add(this.lblReports);
             this.panel4.Controls.Add(this.lblExpense);
             this.panel4.Controls.Add(this.lblMain);
@@ -95,19 +95,22 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // label7
+            // lblSGoals
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblSGoals.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(41, 414);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(167, 21);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "CILJEVI ŠTEDNJE";
+            this.lblSGoals.AutoSize = true;
+            this.lblSGoals.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lblSGoals.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblSGoals.Location = new System.Drawing.Point(41, 414);
+            this.lblSGoals.Name = "lblSGoals";
+            this.lblSGoals.Size = new System.Drawing.Size(167, 21);
+            this.lblSGoals.TabIndex = 6;
+            this.lblSGoals.Text = "CILJEVI ŠTEDNJE";
+            this.lblSGoals.Click += new System.EventHandler(this.lblSGoals_Click);
+            this.lblSGoals.MouseEnter += new System.EventHandler(this.lblSGoals_MouseEnter);
+            this.lblSGoals.MouseLeave += new System.EventHandler(this.lblSGoals_MouseLeave);
             // 
             // lblReports
             // 
@@ -431,7 +434,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblSGoals;
         private System.Windows.Forms.Label lblReports;
         private System.Windows.Forms.Label lblExpense;
         private System.Windows.Forms.Label lblMain;
