@@ -25,11 +25,13 @@ Kako bi im se olakšalo vođenje financija, ovaj softver će im omogućiti jedno
 Oznaka | Naziv | Kratki opis 
 ------ | ----- | ----------- 
 F01 | Prijava korisnika | Aplikacija omogućava korisniku da se prijavi pomoću korisničkog imena i lozinke. Pristup financijskim podacima moguć je samo nakon uspješne autentikacije.
-F02 | Unos prihoda i rashoda | Korisnik može unositi prihode (pokloni, plaća...) i rashode (putovanja, hrana, zabava...), svaki unos je kategoriziran i pohranjen u bazu podataka. 
-FO3 | Pregled financijske povijesti | Aplikacija omogućava pregled svih unesenih prihoda i rashoda kroz tablični prikaz s filtriranjem po datumu i kategoriji.
-FO4 | Postavljanje limita potrošnje | Korisnik može postaviti limit trošenja za svaku kategoriju. Aplikacija šalje sigurnosno upozorenje kada je limit premašen.
-FO5 |Prikaz statistike | Aplikacija prikazuje statističke podatke u obliku pie charta kako bi korisnik lakše razumio potrošnju po kategorijama.
-FO6 | Sigurnosno upozorenje | Kada korisnik premaši postavljeni limit trošenja u nekoj kategoriji, aplikacija prikazuje upozorenje.
+F02 | Unos prihoda i rashoda | Korisnik može unositi prihode (pokloni, plaća...) i rashode (putovanja, hrana, zabava...). Svaki unos mora sadržavati kategoriju, iznos, datum i opis.
+FO3 | Pregled financijske povijesti | Korisnik može pregledati sve prethodno unesene prihode i rashode kroz tablični prikaz. Moguće je filtriranje podataka po datumu i kategoriji radi lakšeg pretraživanja.
+FO4 | Postavljanje limita potrošnje | Omogućuje korisniku definiranje limita potrošnje za određene kategorije. Limit se može ažurirati, a stanje potrošnje po kategorijama se prati.
+FO5 |Prikaz statistike | Korisniku se prikazuju statistički podaci u obliku pie charta, koji jasno vizualizira udjele po kategorijama troškova ili prihoda, olakšavajući analizu financijskog ponašanja.
+FO6 | Dodavanje vlastitih kategorija | Aplikacija omogućuje korisniku dodavanje novih kategorija prihoda i troškova prema vlastitim potrebama.
+FO7 | Postavljanje cilja štednje | Aplikacija omogućuje korisniku postavljanje financijskog cilja (npr. 2000 €) koji se prikazuje na formi zajedno s trenutnom uštedom.
+FO8 | Izvještaji o financijama po vremenskim razdobljima | Korisnik može generirati izvještaje o prihodima i rashodima za odabrani vremenski period (tjedan, mjesec, 6 mjeseci, godina ili određeni datumi). Podaci se prikazuju u obliku tortnog grafikona i tablice s podacima po kategorijama.
 
 ## Tehnologije i oprema
 U projektu koristim .NET Framework 4.8 i C# programski jezik uz Windows Forms (WinForms) za izradu korisničkog sučelja. Baza podataka izrađena je u Microsoft SQL Serveru, a pristup podacima realiziran je korištenjem ADO.NET i DBLayer klase s vježbi.
