@@ -412,7 +412,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmExpense";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmExpense";
+            this.Text = "Troškovi";
             this.Load += new System.EventHandler(this.FrmExpense_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

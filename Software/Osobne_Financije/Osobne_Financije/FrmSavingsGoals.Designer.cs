@@ -39,6 +39,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtCurrentSavings = new System.Windows.Forms.TextBox();
+            this.txtSavingsGoal = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnGoal = new System.Windows.Forms.Button();
             this.cmbCategories = new System.Windows.Forms.ComboBox();
@@ -48,9 +51,6 @@
             this.txtLimitAmount = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtSavingsGoal = new System.Windows.Forms.TextBox();
-            this.txtCurrentSavings = new System.Windows.Forms.TextBox();
             this.btnLimit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvLimits = new System.Windows.Forms.DataGridView();
@@ -223,6 +223,44 @@
             this.panel3.Size = new System.Drawing.Size(1086, 120);
             this.panel3.TabIndex = 20;
             // 
+            // txtCurrentSavings
+            // 
+            this.txtCurrentSavings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCurrentSavings.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCurrentSavings.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCurrentSavings.ForeColor = System.Drawing.Color.Navy;
+            this.txtCurrentSavings.Location = new System.Drawing.Point(891, 82);
+            this.txtCurrentSavings.Name = "txtCurrentSavings";
+            this.txtCurrentSavings.Size = new System.Drawing.Size(157, 28);
+            this.txtCurrentSavings.TabIndex = 8;
+            this.txtCurrentSavings.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSavingsGoal
+            // 
+            this.txtSavingsGoal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSavingsGoal.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSavingsGoal.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSavingsGoal.ForeColor = System.Drawing.Color.Navy;
+            this.txtSavingsGoal.Location = new System.Drawing.Point(891, 34);
+            this.txtSavingsGoal.Name = "txtSavingsGoal";
+            this.txtSavingsGoal.Size = new System.Drawing.Size(157, 28);
+            this.txtSavingsGoal.TabIndex = 7;
+            this.txtSavingsGoal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.Menu;
+            this.label8.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label8.Location = new System.Drawing.Point(657, 68);
+            this.label8.Name = "label8";
+            this.label8.Padding = new System.Windows.Forms.Padding(10, 8, 10, 7);
+            this.label8.Size = new System.Drawing.Size(223, 42);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Trenutna ušteda:";
+            // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -312,44 +350,6 @@
             this.label7.TabIndex = 44;
             this.label7.Text = "Kategorija";
             // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.Menu;
-            this.label8.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label8.Location = new System.Drawing.Point(657, 68);
-            this.label8.Name = "label8";
-            this.label8.Padding = new System.Windows.Forms.Padding(10, 8, 10, 7);
-            this.label8.Size = new System.Drawing.Size(223, 42);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Trenutna ušteda:";
-            // 
-            // txtSavingsGoal
-            // 
-            this.txtSavingsGoal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSavingsGoal.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSavingsGoal.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSavingsGoal.ForeColor = System.Drawing.Color.Navy;
-            this.txtSavingsGoal.Location = new System.Drawing.Point(891, 34);
-            this.txtSavingsGoal.Name = "txtSavingsGoal";
-            this.txtSavingsGoal.Size = new System.Drawing.Size(157, 28);
-            this.txtSavingsGoal.TabIndex = 7;
-            this.txtSavingsGoal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtCurrentSavings
-            // 
-            this.txtCurrentSavings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCurrentSavings.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCurrentSavings.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCurrentSavings.ForeColor = System.Drawing.Color.Navy;
-            this.txtCurrentSavings.Location = new System.Drawing.Point(891, 82);
-            this.txtCurrentSavings.Name = "txtCurrentSavings";
-            this.txtCurrentSavings.Size = new System.Drawing.Size(157, 28);
-            this.txtCurrentSavings.TabIndex = 8;
-            this.txtCurrentSavings.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // btnLimit
             // 
             this.btnLimit.BackColor = System.Drawing.Color.Navy;
@@ -408,7 +408,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmSavingsGoals";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmSavingsGoals";
+            this.Text = "Ciljevi štednje";
             this.Load += new System.EventHandler(this.FrmSavingsGoals_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
