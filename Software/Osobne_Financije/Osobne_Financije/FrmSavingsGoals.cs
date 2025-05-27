@@ -63,6 +63,12 @@ namespace Osobne_Financije
                     .Where(e => e.CategoryId == limit.CategoryId)
                     .Sum(e => e.Amount);
 
+                if (totalSpent > limit.LimitAmount)
+                {
+                    MessageBox.Show($"Upozorenje: Prekoračen limit za kategoriju \"{limit.CategoryName}\"!", "Prekoračenje limita", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+
                 reportList.Add(new LimitReport
                 {
                     CategoryName = limit.CategoryName,
