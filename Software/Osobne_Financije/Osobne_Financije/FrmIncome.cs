@@ -58,7 +58,6 @@ namespace Osobne_Financije
 
             if (isAdded)
             {
-                MessageBox.Show("Prihod dodan!");
                 txtAmount.Clear();
                 txtDescription.Clear();
                 ShowIncomes();
@@ -99,7 +98,6 @@ namespace Osobne_Financije
 
             if (isAdded)
             {
-                MessageBox.Show("Kategorija dodana!");
                 txtCategory.Clear();
                 List<Category> updatedCategories = repo.GetCategoriesByType("Income");
                 cmbCategories.DataSource = null; 
@@ -153,7 +151,6 @@ namespace Osobne_Financije
 
                 if(isDeleted)
                 {
-                    MessageBox.Show("Prihod je uspješno izbrisan.");
                     ShowIncomes();
                 }
                 else

@@ -50,7 +50,6 @@ namespace Osobne_Financije
 
             if (isRegistered)
             {
-                MessageBox.Show("Registracija uspješna!");
                 this.Hide();
                 FrmLogin loginForm = new FrmLogin();
                 loginForm.Show();

@@ -109,7 +109,6 @@ namespace Osobne_Financije
             bool success = repo.AddGoal(goal);
             if (success)
             {
-                MessageBox.Show("Cilj štednje je uspješno postavljen!");
                 txtSavingsGoal.Text = amount.ToString("0.00") + " €";
                 txtGoalAmount.Clear();
             }
@@ -168,7 +167,6 @@ namespace Osobne_Financije
             }
             if (success)
             {
-                MessageBox.Show("Limit je uspješno spremljen!");
                 txtLimitAmount.Clear();
                 ShowLimits();
             }

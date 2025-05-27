@@ -48,8 +48,7 @@ namespace Osobne_Financije
             if (student != null)
             {
                 Session.LoggedStudent = student;
-                MessageBox.Show("Prijava uspješna!");
-
+                
                 this.Hide();
                 new FrmMain().Show();
             }

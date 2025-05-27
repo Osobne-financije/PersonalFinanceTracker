@@ -58,7 +58,6 @@ namespace Osobne_Financije
 
             if (isAdded)
             {
-                MessageBox.Show("Trošak dodan!");
                 txtAmount.Clear();
                 txtDescription.Clear();
                 ShowExpenses();
@@ -97,7 +96,6 @@ namespace Osobne_Financije
 
             if (isAdded)
             {
-                MessageBox.Show("Kategorija dodana!");
                 txtCategory.Clear();
                 List<Category> updatedCategories = repo.GetCategoriesByType("Expense");
                 cmbCategories.DataSource = null;
@@ -149,7 +147,6 @@ namespace Osobne_Financije
 
                 if (isDeleted)
                 {
-                    MessageBox.Show("Trošak je uspješno izbrisan.");
                     ShowExpenses();
                 }
                 else
