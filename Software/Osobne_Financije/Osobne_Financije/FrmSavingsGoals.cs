@@ -3,12 +3,9 @@ using Osobne_Financije.Models;
 using Osobne_Financije.Repositories;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Osobne_Financije

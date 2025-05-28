@@ -23,39 +23,6 @@ namespace Osobne_Financije
             LoadChart();
         }
 
-        private void lblIncomes_Click(object sender, EventArgs e)
-        {
-            FrmIncome incomeForm = new FrmIncome();
-            incomeForm.Show();
-            this.Hide();
-        }
-        private void lblIncomes_MouseEnter(object sender, EventArgs e)
-        {
-            lblIncomes.Location = new Point(lblIncomes.Location.X -5, lblIncomes.Location.Y);
-            lblIncomes.Font = new Font(lblIncomes.Font.FontFamily, 13, FontStyle.Bold);
-        }
-        private void lblIncomes_MouseLeave(object sender, EventArgs e)
-        {
-            lblIncomes.Location = new Point(lblIncomes.Location.X + 5, lblIncomes.Location.Y);
-            lblIncomes.Font = new Font(lblIncomes.Font.FontFamily, 11, FontStyle.Bold);
-        }
-        private void lblExpenses_Click(object sender, EventArgs e)
-        {
-            FrmExpense expenseForm = new FrmExpense();
-            expenseForm.Show();
-            this.Hide();
-        }
-        private void lblExpenses_MouseEnter(object sender, EventArgs e)
-        {
-            lblExpenses.Location = new Point(lblExpenses.Location.X - 5, lblExpenses.Location.Y);
-            lblExpenses.Font = new Font(lblExpenses.Font.FontFamily, 13, FontStyle.Bold);
-        }
-        private void lblExpenses_MouseLeave(object sender, EventArgs e)
-        {
-            lblExpenses.Location = new Point(lblExpenses.Location.X + 5, lblExpenses.Location.Y);
-            lblExpenses.Font = new Font(lblExpenses.Font.FontFamily, 11, FontStyle.Bold);
-        }
-
         private void ShowSummary()
         {
             var incomeRepo = new IncomeRepository();
@@ -69,7 +36,7 @@ namespace Osobne_Financije
 
             lblTotalIncomes.Text = totalIncome.ToString("0.00") + " €";
             lblTotalExpenses.Text = totalExpense.ToString("0.00") + " €";
-            label2.Text = balance.ToString("0.00") + " €";
+            lblBalance.Text = balance.ToString("0.00") + " €";
         }
 
         private void LoadChart()
@@ -119,6 +86,38 @@ namespace Osobne_Financije
             FrmLogin loginForm = new FrmLogin();
             loginForm.Show();
             this.Close();
+        }
+        private void lblIncomes_Click(object sender, EventArgs e)
+        {
+            FrmIncome incomeForm = new FrmIncome();
+            incomeForm.Show();
+            this.Hide();
+        }
+        private void lblIncomes_MouseEnter(object sender, EventArgs e)
+        {
+            lblIncomes.Location = new Point(lblIncomes.Location.X - 5, lblIncomes.Location.Y);
+            lblIncomes.Font = new Font(lblIncomes.Font.FontFamily, 13, FontStyle.Bold);
+        }
+        private void lblIncomes_MouseLeave(object sender, EventArgs e)
+        {
+            lblIncomes.Location = new Point(lblIncomes.Location.X + 5, lblIncomes.Location.Y);
+            lblIncomes.Font = new Font(lblIncomes.Font.FontFamily, 11, FontStyle.Bold);
+        }
+        private void lblExpenses_Click(object sender, EventArgs e)
+        {
+            FrmExpense expenseForm = new FrmExpense();
+            expenseForm.Show();
+            this.Hide();
+        }
+        private void lblExpenses_MouseEnter(object sender, EventArgs e)
+        {
+            lblExpenses.Location = new Point(lblExpenses.Location.X - 5, lblExpenses.Location.Y);
+            lblExpenses.Font = new Font(lblExpenses.Font.FontFamily, 13, FontStyle.Bold);
+        }
+        private void lblExpenses_MouseLeave(object sender, EventArgs e)
+        {
+            lblExpenses.Location = new Point(lblExpenses.Location.X + 5, lblExpenses.Location.Y);
+            lblExpenses.Font = new Font(lblExpenses.Font.FontFamily, 11, FontStyle.Bold);
         }
 
         private void lblReports_Click(object sender, EventArgs e)
